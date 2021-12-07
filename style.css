@@ -8,9 +8,11 @@
 :root {
   --font1: 'Source Sans Pro';
   --black: rgb(40, 40, 40);
-  --grey-light: rgba(107, 107, 107, 0.5);
   --grey-dark: rgb(80, 80, 80);
+  --grey-light: rgba(107, 107, 107, 0.5);
+  --grey-extralight: rgba(184, 184, 184, 0.2);
   --radius: 30px;
+  --gap: 20px;
 }
 
 /********************** general **********************/
@@ -30,16 +32,79 @@ h1 {
   margin: 30px 0;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 100;
   color: var(--grey-dark);
+  margin: 30px 0;
 }
 span {
   text-decoration: underline;
 }
-/********************** sepcs **********************/
-.S1, .S2, .S3 {
-  border-bottom: 1px solid var(--grey-light);
+button, input[type="submit"] {
+  background: none;
+  border: 1px solid var(--grey-light);
+  border-radius: var(--radius);
+  margin: 30px 0;
+  padding: 20px 30px;
+  width: 200px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+form {
+  /* margin: 40px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  grid-template-areas: 
+    "name email"
+    "msg msg"
+    "msg msg"
+    "btn btn"
+  ;
+  gap: var(--gap);
+}
+li {
+  list-style: none;
+  /* width: 50px; */
+  color: var(--black);
+  margin: 60px 40px;
+}
+i {
+  
+}
+
+/********************** specs **********************/
+form div {
+  width: 40vh;
+}
+form div label, form div input {
+  width: 300px;
+  height: 40px;
+}
+form div label {
+  text-align: center;
+  font-family: var(--font1);
+  font-size: 1.5rem;
+  color: var(--grey-dark);
+}
+form div textarea {
+  width: 680px;
+  height: 200px;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/********************** Classes **********************/
+.S1, .S2, .S3, .S4 {
+  border-bottom: 1px solid var(--grey-extralight);
 }
 .S1 {
   display: grid;
@@ -51,32 +116,106 @@ span {
   justify-content: space-between;
   align-items: center;
 }
+.S2 {
+  display: grid;
+  grid-template-columns: 33%, 67%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "i t"
+  ;
+  justify-content: space-between;
+  align-items: center;
+}
+.S3 {
+  display: grid;
+  grid-template-columns: 67%, 33%;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "t i"
+  ;
+  justify-content: space-between;
+  align-items: center;
+}
+.S4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 80px auto; */
+  padding: 50px 0;
+}
 .S1 p, .S2 p, .S3 p {
   color: var(--grey-light);
   font-size: 1.4rem;
   line-height: 30px;
-}
-.S1 button, .S2 button, .S3 button {
-  background: none;
-  border: 1px solid var(--grey-light);
-  border-radius: var(--radius);
-  margin: 30px 0;
-  padding: 15px 20px;
-  width: 150px;
+  letter-spacing: 1px;
 }
 
 /********************** IDs **********************/
 #S1-txt {
-  /* width: 50%; */
   grid-area: t;
-  margin: auto 50px;
+  margin: auto 70px;
+}
+#S2-txt {
+  grid-area: t;
+  margin: auto 70px;
+}
+#S3-txt {
+  grid-area: t;
+  margin: auto 70px;
 }
 #S1-img {
   height: 500px;
-  width: 890px;
+  width: 50vw;
   grid-area: i;
   background: url(./assets/img/banner.jpg);
-  background-size: 890px;
-  /* overflow: hidden; */
-  object-fit:cover;
+  background-size: 130vh;
+  background-position: bottom right;
+  object-fit: cover;
+}
+#S2-img {
+  height: 400px;
+  width: 33vw;
+  grid-area: i;
+  background: url(./assets/img/banner-1.jpg);
+  background-size: 800px;
+  background-position: center;
+  object-fit: cover;
+}
+#S3-img {
+  height: 400px;
+  width: 33vw;
+  grid-area: i;
+  background: url(./assets/img/banner-2.jpg);
+  background-size: 800px;
+  background-position: center;
+  object-fit: cover;
+}
+#div-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: name;
+}
+#div-email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: email;
+}
+#div-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: msg;
+}
+#div-button {
+  grid-area: btn;
+  text-align: center;  
+}
+#S2-txt p, #S3-txt p {
+  font-size: 1.1rem;
 }
