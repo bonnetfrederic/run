@@ -6,7 +6,7 @@
 
 /********************** variables **********************/
 :root {
-  --font1: 'Source Sans Pro';
+  --font1: 'Source Sans Pro', sans-serif;;
   --black: rgb(40, 40, 40);
   --grey-dark: rgb(80, 80, 80);
   --grey-light: rgba(107, 107, 107, 0.5);
@@ -106,6 +106,15 @@ footer ul {
 input[type="submit"] {
   grid-area: btn;
   text-align: center;
+}
+button:hover, input[type="submit"]:hover {
+  cursor: pointer;
+  background: var(--grey-dark);
+  color: whitesmoke;
+}
+i:hover {
+  cursor: pointer;
+  transform: scale(120%);
 }
 
 /********************** Classes **********************/
