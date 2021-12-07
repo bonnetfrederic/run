@@ -52,7 +52,6 @@ button, input[type="submit"] {
   text-align: center;
 }
 form {
-  /* margin: 40px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, 1fr);
@@ -72,9 +71,10 @@ li {
   /* width: 50px; */
   color: var(--black);
   margin: 60px 40px;
+  position: relative;
 }
 i {
-  
+  background: none;
 }
 
 /********************** specs **********************/
@@ -94,6 +94,7 @@ form div label {
 form div textarea {
   width: 680px;
   height: 200px;
+  resize: vertical;
 }
 footer ul {
   display: flex;
@@ -149,6 +150,16 @@ footer ul {
   font-size: 1.4rem;
   line-height: 30px;
   letter-spacing: 1px;
+}
+.circle {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 1px solid var(--grey-light);
+  border-radius: 100px;
+  top: -50%;
+  left: -50%;
+  transform: translate(-100%, -100%);
 }
 
 /********************** IDs **********************/
