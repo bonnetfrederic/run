@@ -9,7 +9,8 @@
   --font1: 'Source Sans Pro';
   --black: rgb(40, 40, 40);
   --grey-light: rgba(107, 107, 107, 0.5);
-  --grey-dark: rgba(50, 50, 50);
+  --grey-dark: rgb(80, 80, 80);
+  --radius: 30px;
 }
 
 /********************** general **********************/
@@ -20,19 +21,62 @@
 }
 body {
   font-family: var(--font1);
-  color: var(--grey-dark);
+  color: var(--grey-light);
 }
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  color: var(--grey-dark);
   font-weight: 100;
+  margin: 30px 0;
 }
 h2 {
   font-size: 2rem;
   font-weight: 100;
   color: var(--grey-dark);
 }
-
+span {
+  text-decoration: underline;
+}
 /********************** sepcs **********************/
 .S1, .S2, .S3 {
   border-bottom: 1px solid var(--grey-light);
+}
+.S1 {
+  display: grid;
+  grid-template-columns: 500px, 500px;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "t i"
+  ;
+  justify-content: space-between;
+  align-items: center;
+}
+.S1 p, .S2 p, .S3 p {
+  color: var(--grey-light);
+  font-size: 1.4rem;
+  line-height: 30px;
+}
+.S1 button, .S2 button, .S3 button {
+  background: none;
+  border: 1px solid var(--grey-light);
+  border-radius: var(--radius);
+  margin: 30px 0;
+  padding: 15px 20px;
+  width: 150px;
+}
+
+/********************** IDs **********************/
+#S1-txt {
+  /* width: 50%; */
+  grid-area: t;
+  margin: auto 50px;
+}
+#S1-img {
+  height: 500px;
+  width: 890px;
+  grid-area: i;
+  background: url(./assets/img/banner.jpg);
+  background-size: 890px;
+  /* overflow: hidden; */
+  object-fit:cover;
 }
