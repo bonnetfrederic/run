@@ -246,3 +246,149 @@ i:hover {
 #S2-txt p, #S3-txt p {
   font-size: 1.1rem;
 }
+
+/********************** @media **********************/
+@media (max-width: 800px) {
+  h1 {
+    font-size: 2rem;
+    margin: 20px auto;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.5rem;
+    margin: 20px auto;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+    margin: 0 5%;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-areas: 
+      "name"
+      "email"
+      "msg"
+      "btn"
+    ;
+    gap: 0px;
+  }
+  button, input[type="submit"] {
+    margin: 30px auto;
+    padding: 20px 30px;
+    width: 200px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  li {
+    list-style: none;
+    color: var(--black);
+    margin: 10px;
+  }
+  form div {
+    width: 100vh;
+  }
+  form div label, form div input {
+    width: 90vh;
+    height: 40px;
+  }
+  form div textarea {
+    width: 90vh;
+    height: 200px;
+    resize: none;
+  }
+  .S1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+      "i"
+      "t"
+    ;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .S2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+      "i"
+      "t"
+    ;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .S3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+      "i"
+      "t"
+    ;
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+  }
+  #S1-txt {
+    grid-area: t;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #S2-txt {
+    grid-area: t;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #S3-txt {
+    grid-area: t;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #S1-img {
+    height: 500px;
+    width: 100vw;
+    grid-area: i;
+    background: url(./assets/img/banner.jpg);
+    background-size: 100vh;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+  #S2-img {
+    height: 400px;
+    width: 100vw;
+    grid-area: i;
+    background: url(./assets/img/banner-1.jpg);
+    background-size: 100vw;
+    background-position: center;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
+  #S3-img {
+    height: 800px;
+    width: 100vw;
+    grid-area: i;
+    background: url(./assets/img/banner-2.jpg);
+    background-size: 100vw;
+    background-position: center;
+    object-fit: contain;
+    background-repeat: no-repeat;
+  }
+}
