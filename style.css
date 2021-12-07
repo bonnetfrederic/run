@@ -7,6 +7,9 @@
 /********************** variables **********************/
 :root {
   --font1: 'Source Sans Pro';
+  --black: rgb(40, 40, 40);
+  --grey-light: rgba(107, 107, 107, 0.5);
+  --grey-dark: rgba(50, 50, 50);
 }
 
 /********************** general **********************/
@@ -15,5 +18,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: var(--font1);
+  color: var(--grey-dark);
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 100;
+  color: var(--grey-dark);
+}
 
 /********************** sepcs **********************/
+.S1, .S2, .S3 {
+  border-bottom: 1px solid var(--grey-light);
+}
