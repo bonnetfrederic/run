@@ -1,0 +1,19 @@
+/********************** imports **********************/
+@font-face {
+  font-family: 'Source Sans Pro', sans-serif;
+  src: url(./assets/fonts/SourceSansPro-Light.ttf);
+}
+
+/********************** variables **********************/
+:root {
+  --font1: 'Source Sans Pro';
+}
+
+/********************** general **********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/********************** sepcs **********************/
