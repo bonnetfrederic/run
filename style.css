@@ -1,12 +1,12 @@
-/********************** imports **********************/
+/******************************** imports ********************************/
 @font-face {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   src: url(./assets/fonts/SourceSansPro-Light.ttf);
 }
 
 /********************** variables **********************/
 :root {
-  --font1: 'Source Sans Pro', sans-serif;;
+  --font1: "Source Sans Pro", sans-serif;
   --black: rgb(40, 40, 40);
   --grey-dark: rgb(80, 80, 80);
   --grey-light: rgba(107, 107, 107, 0.5);
@@ -15,7 +15,7 @@
   --gap: 20px;
 }
 
-/********************** general **********************/
+/******************************** general ********************************/
 * {
   margin: 0;
   padding: 0;
@@ -40,7 +40,8 @@ h2 {
 span {
   text-decoration: underline;
 }
-button, input[type="submit"] {
+button,
+input[type="submit"] {
   background: none;
   border: 1px solid var(--grey-light);
   border-radius: var(--radius);
@@ -58,45 +59,28 @@ form {
   justify-content: center;
   align-items: center;
   justify-items: center;
-  grid-template-areas: 
+  grid-template-areas:
     "name email"
     "msg msg"
     "msg msg"
-    "btn btn"
-  ;
+    "btn btn";
   gap: var(--gap);
 }
 li {
+  font-size: 1.5rem;
   list-style: none;
-  /* width: 50px; */
   color: var(--black);
   margin: 60px 40px;
-  /* position: relative; */
 }
 i {
   background: none;
   vertical-align: middle;
 }
+footer {
+  padding: 20px 0;
+}
 
-/********************** specs **********************/
-form div {
-  width: 40vh;
-}
-form div label, form div input {
-  width: 300px;
-  height: 40px;
-}
-form div label {
-  text-align: center;
-  font-family: var(--font1);
-  font-size: 1.5rem;
-  color: var(--grey-dark);
-}
-form div textarea {
-  width: 680px;
-  height: 200px;
-  resize: vertical;
-}
+/******************************** specs ********************************/
 footer ul {
   display: flex;
   flex-direction: row;
@@ -107,7 +91,8 @@ input[type="submit"] {
   grid-area: btn;
   text-align: center;
 }
-button:hover, input[type="submit"]:hover {
+button:hover,
+input[type="submit"]:hover {
   cursor: pointer;
   background: var(--grey-dark);
   color: whitesmoke;
@@ -117,17 +102,18 @@ i:hover {
   transform: scale(120%);
 }
 
-/********************** Classes **********************/
-.S1, .S2, .S3, .S4 {
+/******************************** Classes ********************************/
+.S1,
+.S2,
+.S3,
+.S4 {
   border-bottom: 1px solid var(--grey-extralight);
 }
 .S1 {
   display: grid;
   grid-template-columns: 500px, 500px;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "t i"
-  ;
+  grid-template-areas: "t i";
   justify-content: space-between;
   align-items: center;
 }
@@ -135,9 +121,7 @@ i:hover {
   display: grid;
   grid-template-columns: 33%, 67%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "i t"
-  ;
+  grid-template-areas: "i t";
   justify-content: space-between;
   align-items: center;
 }
@@ -145,9 +129,7 @@ i:hover {
   display: grid;
   grid-template-columns: 67%, 33%;
   grid-template-rows: 1fr;
-  grid-template-areas: 
-    "t i"
-  ;
+  grid-template-areas: "t i";
   justify-content: space-between;
   align-items: center;
 }
@@ -156,33 +138,27 @@ i:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* margin: 80px auto; */
-  padding: 50px 0;
+  padding: 30px 0;
 }
-.S1 p, .S2 p, .S3 p {
+.S1 p,
+.S2 p,
+.S3 p {
   color: var(--grey-light);
   font-size: 1.4rem;
   line-height: 30px;
   letter-spacing: 1px;
 }
-/* .circle {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  transform: translate(-50%, -50%);
-  height: 30px;
-  width: 30px;
+footer li {
+  height: 60px;
+  width: 60px;
   border: 1px solid var(--grey-light);
   border-radius: 100px;
-} */
-.fa-stack { 
-  font-size: 1rem;
-}
-.fa-circle {
-  color: var(--grey-extralight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/********************** IDs **********************/
+/******************************** IDs ********************************/
 #S1-txt {
   grid-area: t;
   margin: auto 70px;
@@ -222,7 +198,29 @@ i:hover {
   background-position: center;
   object-fit: cover;
 }
+#S2-txt p,
+#S3-txt p {
+  font-size: 1.1rem;
+}
+#div-form {
+  width: 80%;
+  padding: 0;
+}
+#div-form label {
+  font-family: var(--font1);
+  font-size: 1.5rem;
+  color: var(--grey-dark);
+}
+#div-form label, #div-form input { 
+  height: 40px;
+}
+#div-form input[type="submit"] {
+  grid-area: btn;
+  text-align: center;
+  padding: 0;
+}
 #div-name {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -230,6 +228,7 @@ i:hover {
   grid-area: name;
 }
 #div-email {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -237,17 +236,31 @@ i:hover {
   grid-area: email;
 }
 #div-message {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   grid-area: msg;
 }
-#S2-txt p, #S3-txt p {
-  font-size: 1.1rem;
+#div-name label, #div-name input {
+  width: 100%;
+  text-align: center;
+}
+#div-email label, #div-email input {
+  width: 100%;
+  text-align: center;
+}
+#div-message label, #div-message textarea {
+  width: 100%;
+  text-align: center;
+}
+#div-message textarea {
+  height: 200px;
+  resize: vertical;
 }
 
-/********************** @media **********************/
+/******************************** @media ********************************/
 @media (max-width: 800px) {
   h1 {
     font-size: 2rem;
@@ -264,21 +277,22 @@ i:hover {
     margin: 0 5%;
   }
   form {
+    width: 100vh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
     justify-items: center;
-    grid-template-areas: 
+    grid-template-areas:
       "name"
       "email"
       "msg"
-      "btn"
-    ;
+      "btn";
     gap: 0px;
   }
-  button, input[type="submit"] {
+  button,
+  input[type="submit"] {
     margin: 30px auto;
     padding: 20px 30px;
     width: 200px;
@@ -289,17 +303,15 @@ i:hover {
   li {
     list-style: none;
     color: var(--black);
-    margin: 10px;
+    margin: 10px 20px;
   }
-  form div {
-    width: 100vh;
-  }
-  form div label, form div input {
-    width: 90vh;
+  form div label,
+  form div input {
+    width: 600px;
     height: 40px;
   }
   form div textarea {
-    width: 90vh;
+    width: 100vh;
     height: 200px;
     resize: none;
   }
@@ -307,10 +319,9 @@ i:hover {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "i"
-      "t"
-    ;
+      "t";
     justify-content: space-between;
     align-items: center;
   }
@@ -318,24 +329,31 @@ i:hover {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "i"
-      "t"
-    ;
+      "t";
     justify-content: space-between;
     align-items: center;
   }
   .S3 {
+    height: 1150px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "i"
-      "t"
-    ;
+      "t";
     justify-content: center;
     align-items: start;
     justify-items: center;
+  }
+  .S4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
   }
   #S1-txt {
     grid-area: t;
@@ -370,6 +388,7 @@ i:hover {
     background-position: center;
     object-fit: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
   }
   #S2-img {
     height: 400px;
@@ -390,5 +409,50 @@ i:hover {
     background-position: center;
     object-fit: contain;
     background-repeat: no-repeat;
+  }
+  #div-form {
+    width: 400px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+  }
+  #div-form form {
+    width: 400px;
+    height: 500px;
+    margin: 0;
+    padding: 0;
+  }
+  #div-name {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: name;
+    margin: 0;
+    padding: 0;
+  }
+  #div-email {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: email;
+    margin: 0;
+    padding: 0;
+  }
+  #div-message {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: msg;
+    margin: 0;
+    padding: 20px 0;
+  }
+  #div-message textarea {
+    width: 380px;
   }
 }
