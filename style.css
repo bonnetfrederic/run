@@ -12,7 +12,7 @@
   --grey-light: rgba(107, 107, 107, 0.5);
   --grey-extralight: rgba(184, 184, 184, 0.2);
   --radius: 30px;
-  --gap: 20px;
+  --gap: 10px;
 }
 
 /******************************** general ********************************/
@@ -203,15 +203,18 @@ footer li {
   font-size: 1.1rem;
 }
 #div-form {
-  width: 80%;
+  width: 60%;
+  height: 400px;
   padding: 0;
+  margin: 0 0 50px 0;
 }
 #div-form label {
   font-family: var(--font1);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--grey-dark);
+  height: 30px;
 }
-#div-form label, #div-form input { 
+#div-form input { 
   height: 40px;
 }
 #div-form input[type="submit"] {
